@@ -1,23 +1,19 @@
 import random
-from random import randint
-n= int(input(""))
-li=[int(input()) for x in range(n)]
+n= int(input("Enter no of elements in list"))-1
+li=list(map(str,input().split()))
 while True:
-    a=random.randint(0,len(li)-1)
-    b=random.randint(0,len(li)-1)
-    s1=li[a]
-    li[a]=li[b]
-    li[b]=s1
     count=0
-    for x in range(len(li)-1):
+    for x in range(n):
         if li[x]<li[x+1]:
            count=count+1
         else:
             break
-   
-    if count==len(li)-1:
+    if count==n:
        break
-    
-for x in range(len(li)):
-    print(li[x],end=' ')
+    a=random.randint(0,n)
+    b=random.randint(0,n)
+    li[a],li[b]=li[b],li[a]
+
+print(" ".join(li))
+
 
