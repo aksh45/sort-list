@@ -1,4 +1,4 @@
-mport random
+import random
 n= int(input("Enter no of elements in list"))-1
 li=list(map(str,input().split()))
 while True:
